@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" spacing="0" style="-fx-background-color: #1a1f36;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.studentapp.LoginController">
+
+    <!-- Header banner -->
+    <VBox alignment="CENTER" style="-fx-background-color: #2c3e8c; -fx-padding: 30 40 24 40;">
+        <Label style="-fx-text-fill: white; -fx-font-size: 20px; -fx-font-weight: bold;" text="Student Management System" />
+        <Label style="-fx-text-fill: #a0aec0; -fx-font-size: 12px; -fx-padding: 6 0 0 0;" text="Please log in to continue" />
+    </VBox>
+
+    <!-- Login card -->
+    <VBox alignment="CENTER_LEFT" spacing="14" style="-fx-background-color: #242b4d; -fx-padding: 30 40 30 40;                  -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 20, 0, 0, 4);">
+
+        <Label style="-fx-text-fill: #a0aec0; -fx-font-size: 11px; -fx-font-weight: bold;" text="Username" />
+        <TextField fx:id="txtUsername" maxWidth="360" promptText="Enter username" style="-fx-background-color: #1a1f36; -fx-text-fill: white;                           -fx-prompt-text-fill: #4a5568; -fx-border-color: #3d4a7a;                           -fx-border-radius: 6; -fx-background-radius: 6;                           -fx-padding: 10 12 10 12; -fx-font-size: 13px;" />
+
+        <Label style="-fx-text-fill: #a0aec0; -fx-font-size: 11px; -fx-font-weight: bold;" text="Password" />
+        <PasswordField fx:id="txtPassword" maxWidth="360" promptText="Enter password" style="-fx-background-color: #1a1f36; -fx-text-fill: white;                               -fx-prompt-text-fill: #4a5568; -fx-border-color: #3d4a7a;                               -fx-border-radius: 6; -fx-background-radius: 6;                               -fx-padding: 10 12 10 12; -fx-font-size: 13px;" />
+
+        <Label fx:id="lblError" maxWidth="360" style="-fx-text-fill: #fc8181; -fx-font-size: 12px;" text="" wrapText="true" />
+
+        <HBox alignment="CENTER_RIGHT" maxWidth="360" spacing="10">
+            <Button onAction="#handleClear" style="-fx-background-color: #3d4a7a; -fx-text-fill: white;                            -fx-background-radius: 6; -fx-padding: 9 22 9 22;                            -fx-font-size: 13px; -fx-cursor: hand;" text="Clear" />
+            <Button onAction="#handleLogin" style="-fx-background-color: #2c3e8c; -fx-text-fill: white;                            -fx-background-radius: 6; -fx-padding: 9 28 9 28;                            -fx-font-size: 13px; -fx-font-weight: bold; -fx-cursor: hand;" text="Login" />
+        </HBox>
+    </VBox>
+
+    <!-- Footer hint -->
+    <VBox alignment="CENTER" style="-fx-padding: 16 0 0 0;" />
+
+</VBox>
